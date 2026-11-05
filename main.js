@@ -1,6 +1,6 @@
 
 (function(){
-var WA='918221822243',EMAIL='drgagan.10@gmail.com',TEL='+918221822243';
+var WA='918221826243',EMAIL='drgagan.10@gmail.com',TEL='+918221826243';
 var DEF="Hello GAMING PC! I am interested in your gaming PCs and computer services in Amritsar. Please share details about available gaming PCs, configurations, prices, home installation and game installation services.";
 
 function wa(m){
@@ -128,7 +128,7 @@ if(form)form.addEventListener('submit',function(e){
 var EMAIL='drgagan.10@gmail.com';
 
 function wa(m){
-  return 'https://wa.me/918221822243?text='+encodeURIComponent(m);
+  return 'https://wa.me/918221826243?text='+encodeURIComponent(m);
 }
 
 document.querySelectorAll('.wf').forEach(function(f){
@@ -294,7 +294,7 @@ var EMAIL='drgagan.10@gmail.com',
 G='Hello GAMING PC! I am interested in ';
 
 function wa(m){
-  return 'https://wa.me/918221822243?text='+encodeURIComponent(m);
+  return 'https://wa.me/918221826243?text='+encodeURIComponent(m);
 }
 
 function fbm(){
