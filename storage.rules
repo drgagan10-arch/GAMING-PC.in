@@ -1,0 +1,12 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // REPLACE with your Firebase Authentication user UID.
+    function isAdmin() { return request.auth != null && request.auth.uid == 'kcYrl8PNXydzKOcxOlqrvPg7yRf2'; }
+    match /{folder}/{file} {
+      allow read: if folder in ['products','gallery','games'];
+      allow write: if folder in ['products','gallery','games'] && isAdmin()
+        && request.resource.size < 5 * 1024 * 1024 && request.resource.contentType.matches('image/.*');
+    }
+  }
+}
