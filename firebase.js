@@ -28,7 +28,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCihkEyuxtqj07VlbnENoW1Mg5RCUuHlIY",
+  apiKey: "AIzaSyCihmEyuxtqj07VlbnENoW1Mg5RCUuHlIY",
   authDomain: "ai-tool-m.firebaseapp.com",
   projectId: "ai-tool-m",
   storageBucket: "ai-tool-m.firebasestorage.app",
@@ -36,6 +36,10 @@ const firebaseConfig = {
   appId: "1:996677486581:web:ead85d45d6f176e04782bc",
   measurementId: "G-VXY5DZMT3F"
 };
+
+// The only authorized administrator. This is used for the admin screen only;
+// real protection is enforced server-side by firestore.rules (same UID).
+export const ADMIN_UID = "kcYrl8PNXydzKOcxOlqrvPg7yRf2";
 
 export const app = initializeApp(firebaseConfig);
 

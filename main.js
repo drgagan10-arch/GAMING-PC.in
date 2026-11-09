@@ -888,6 +888,17 @@ if(adm)fbm().then(function(fb){
   });
 
   fb.onAuthStateChanged(fb.auth,function(u){
+
+    if(u&&u.uid!==fb.ADMIN_UID){
+      /* Signed in, but not the authorized administrator: no panel, no data. */
+      li.hidden=false;
+      pn.hidden=true;
+      ls.textContent='';
+      er.textContent='This account is not authorized for the admin area.';
+      fb.signOut(fb.auth).catch(function(){});
+      return;
+    }
+
     li.hidden=!!u;
     pn.hidden=!u;
 
@@ -896,7 +907,7 @@ if(adm)fbm().then(function(fb){
       load();
     }else{
       ls.textContent='';
-      er.textContent='';
+      if(er.textContent==='Signed in. Loading administrator data...')er.textContent='';
     }
   },err);
 
